@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   String title;
   IconData icon;
+
   //constructor
   CustomAppBar({
     this.title = 'Dashboard',
@@ -13,17 +14,15 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.black,
-      elevation: 5,
       title: Text(title),
-      leading: IconButton(
-        icon: Icon(icon),
-        onPressed: () {},
+      leading: GestureDetector(
+        onTap: () {},
+        child: Icon(icon),
       ),
-      actions: <Widget>[],
     );
   }
 
   @override
   // TODO: implement preferredSize
-  Size get preferredSize => Size.fromHeight(100.0);
+  Size get preferredSize => Size.fromHeight(50.0);
 }
