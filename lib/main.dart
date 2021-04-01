@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ladachisb_salesystem/widgets/customAppBar.dart';
-import 'package:ladachisb_salesystem/screens/dashboard.dart';
+import 'package:ladachisb_salesystem/screens/Dashboard.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,7 +11,7 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: dashboard(),
+      home: Dashboard(),
     );
   }
 }

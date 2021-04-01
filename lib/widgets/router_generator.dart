@@ -1,19 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:ladachisb_salesystem/screens/dashboard.dart';
-import 'package:ladachisb_salesystem/screens/newOrder.dart';
+import 'package:ladachisb_salesystem/screens/Dashboard.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     final args = settings.arguments;
     switch (settings.name) {
       case '/DashBoard':
-        return MaterialPageRoute(builder: (_) => dashboard());
+        return MaterialPageRoute(builder: (_) => Dashboard());
       case '/New Order':
-        if (args is String) {
-          return MaterialPageRoute(
-            builder: (_) => newOrder(),
-          );
-        }
+        if (args is String) {}
         return _errorRoute();
       default:
         return _errorRoute();
